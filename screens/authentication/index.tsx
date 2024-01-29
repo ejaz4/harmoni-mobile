@@ -5,6 +5,7 @@ import React from "react";
 import { ServerSelection } from "./serverSelection";
 import { GlobalStyles } from "../../styles";
 import { View } from "react-native";
+import { LoginScreen } from "./login";
 
 const AuthenticationStack = createNativeStackNavigator();
 
@@ -29,6 +30,11 @@ export const Authentication = ({
 				<AuthenticationStack.Screen
 					name="ServerSelection"
 					component={ServerSelection}
+				/>
+
+				<AuthenticationStack.Screen
+					name="Login"
+					component={LoginScreen}
 				/>
 			</AuthenticationStack.Navigator>
 		</View>

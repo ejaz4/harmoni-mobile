@@ -45,6 +45,14 @@ export const GlobalStyles = StyleSheet.create({
 		paddingRight: 20,
 		width: "auto",
 	},
+	screen: {
+		flexDirection: "column",
+		justifyContent: "flex-start",
+		alignItems: "center",
+		paddingLeft: 20,
+		paddingRight: 20,
+		paddingTop: 20,
+	},
 	textInput: {
 		width: "100%",
 		padding: 12,

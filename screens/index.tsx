@@ -13,6 +13,7 @@ import {
 	PlayingIcon,
 	SearchIcon,
 } from "../components/tabbar/icons";
+import { SearchScreen } from "./search";
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +23,12 @@ export const MainScreen = ({
 	navigation: NavigationProp<any>;
 }) => {
 	return (
-		<Tab.Navigator tabBar={(props) => <TabBar {...props} />}>
+		<Tab.Navigator
+			screenOptions={{
+				headerShown: false,
+			}}
+			tabBar={(props) => <TabBar {...props} />}
+		>
 			<Tab.Screen
 				name="Home"
 				component={() => <View></View>}
@@ -35,7 +41,7 @@ export const MainScreen = ({
 				options={{
 					tabBarIcon: SearchIcon,
 				}}
-				component={() => <View></View>}
+				component={SearchScreen}
 			/>
 			<Tab.Screen
 				name="Library"
